@@ -47,7 +47,7 @@ function Row({ k, v }: { k: string; v: string }) {
 }
 
 function Card({ tc }: { tc: ToolCall }) {
-  const r = tc.result;
+  const r: any = tc.result;
   if (!isObj(r) || "error" in r) return null;
   if (tc.name === "search_products") {
     const ps: Product[] = Array.isArray(r.products) ? r.products : [];
