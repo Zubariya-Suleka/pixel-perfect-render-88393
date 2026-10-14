@@ -7,7 +7,7 @@ export const categoryIcon = (c: string) =>
     c?.toLowerCase()
   ] ?? ShoppingBag;
 
-const isObj = (r: unknown): r is Record<string, any> => !!r && typeof r === "object";
+const isObj = (r: unknown): r is any => !!r && typeof r === "object";
 
 function ProductCard({ p }: { p: Product }) {
   const Icon = categoryIcon(p.category);
